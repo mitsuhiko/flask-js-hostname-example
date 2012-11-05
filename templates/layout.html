@@ -1,0 +1,10 @@
+<!doctype html>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js"></script>
+<title>{% block title %}{% endblock %} | Stuff</title>
+<script type=text/javascript>
+  var $APP_SETTINGS = {
+    host: {{ g.host|tojson|safe }}
+  };
+</script>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+{% block body %}{% endblock %}
